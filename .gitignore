@@ -1,0 +1,7 @@
+t
+a.out
+*.o
+*.a
+*.d
+.gdb_history
+__pycache__
