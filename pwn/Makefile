@@ -2,7 +2,7 @@
 
 CC             := /usr/bin/cc
 DEBUGFLAGS     := -ggdb3
-CFLAGS         := $(DEBUGFLAGS) -fno-stack-protector
+CFLAGS         := $(DEBUGFLAGS) -fno-stack-protector -no-pie
 
 RM             := /usr/bin/rm
 
@@ -14,7 +14,7 @@ all: $(CHALLENGES)
 %: %.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-re: fclean all
+re: clean all
 
 clean:
 	$(RM) -f $(CHALLENGES)
