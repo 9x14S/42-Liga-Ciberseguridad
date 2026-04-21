@@ -8,11 +8,12 @@
 
 struct pwnme {
   volatile int uservalue;
+  char username[USERNAME_MAX];
 };
 
 void win(int whatever) {
   (void)whatever;
-  char *congrats = "You win!";
+  char *congrats = "You win!\n";
   write(1, congrats, strlen(congrats));
   exit(0);
 }
@@ -32,6 +33,8 @@ int main(void) {
 
   printf("Input a number: ");
   scanf("%d", &pwn.uservalue);
+  printf("Input your name: ");
+  scanf("%s", pwn.username);
   // There's many ways you can crash this program...
   if ((int)(42 / pwn.uservalue)) {
     puts("You fail!");

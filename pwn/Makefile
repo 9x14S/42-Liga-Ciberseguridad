@@ -2,7 +2,9 @@
 
 CC             := /usr/bin/cc
 DEBUGFLAGS     := -ggdb3
-CFLAGS         := $(DEBUGFLAGS) -fno-stack-protector -fno-PIE -fno-PIC
+CFLAGS         := $(DEBUGFLAGS) -fno-stack-protector
+
+RM             := /usr/bin/rm
 
 CHALLENGE_SRCS := $(shell find . -name "*.c")
 CHALLENGES     := $(CHALLENGE_SRCS:.c=)
