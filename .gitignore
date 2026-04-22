@@ -5,3 +5,9 @@ a.out
 *.d
 .gdb_history
 __pycache__
+change-var
+set-var
+crashme
+ret2win2
+ret2win1
+libcleak
